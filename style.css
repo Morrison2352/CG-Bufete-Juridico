@@ -6,7 +6,7 @@ body {
   background: #f9fafb;
   color: #2c3e50;
   line-height: 1.7;
-  text-align: center;
+  text-align: center; /* CENTRAR todo por defecto */
 }
 
 /* Encabezado */
@@ -45,6 +45,7 @@ header p {
   font-size: 1.1em;
   box-shadow: 0 5px 15px rgba(230, 126, 34, 0.4);
   transition: background 0.4s ease, transform 0.3s ease;
+  margin-top: 15px;
 }
 
 .btn:hover {
@@ -67,7 +68,7 @@ section {
   border-radius: 20px;
   box-shadow: 0 12px 35px rgba(44, 62, 80, 0.1);
   margin-top: 30px;
-  text-align: center;
+  text-align: center; /* CENTRAR texto dentro de la tarjeta */
   transition: box-shadow 0.3s ease;
 }
 
@@ -86,24 +87,27 @@ h2 {
 }
 
 /* Listas de servicios */
+/* Cambiamos para centrar los items */
 ul {
   list-style: none;
   padding: 0;
-  margin: 0 auto;
+  margin: 0 auto 0 auto;
   max-width: 480px;
-  text-align: left;
+  text-align: center; /* CENTRAR texto de la lista */
 }
 
 ul li {
+  display: inline-block; /* Para que queden en línea o en bloques centrados */
   background: #fef6e4;
   padding: 14px 20px;
-  margin: 12px 0;
+  margin: 8px 10px;
   border-radius: 12px;
-  border-left: 6px solid #e67e22;
+  border-left: none; /* quitamos borde a la izquierda */
   font-weight: 600;
   font-size: 1.05em;
   color: #34495e;
   box-shadow: 0 4px 10px rgba(230, 126, 34, 0.1);
+  min-width: 180px; /* ancho mínimo para que se vean uniformes */
 }
 
 /* Contacto */
