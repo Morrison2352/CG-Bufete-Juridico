@@ -3,8 +3,8 @@ body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
-  background: #f9fafb; /* Fondo muy suave */
-  color: #2c3e50; /* Azul oscuro elegante */
+  background: #f9fafb;
+  color: #2c3e50;
   line-height: 1.7;
   text-align: center;
 }
@@ -36,7 +36,7 @@ header p {
 /* Botones */
 .btn {
   display: inline-block;
-  background: #e67e22; /* naranja quemado */
+  background: #e67e22;
   color: #fff;
   padding: 16px 36px;
   text-decoration: none;
@@ -95,7 +95,7 @@ ul {
 }
 
 ul li {
-  background: #fef6e4; /* Fondo crema suave */
+  background: #fef6e4;
   padding: 14px 20px;
   margin: 12px 0;
   border-radius: 12px;
