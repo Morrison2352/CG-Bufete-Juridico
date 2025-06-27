@@ -30,7 +30,10 @@
 <body>
   <header>
     <div class="logo-container">
-      <img src="https://raw.githubusercontent.com/Morrison2352/CG-Bufete-Juridico/refs/heads/main/CG%20Bufete%20Juridico.png.jpeg" alt="Logo CG Bufete Jurídico" />
+      <img
+        src="https://raw.githubusercontent.com/Morrison2352/CG-Bufete-Juridico/refs/heads/main/CG%20Bufete%20Juridico.png.jpeg"
+        alt="Logo CG Bufete Jurídico"
+      />
     </div>
     <p>Tu confianza es nuestra prioridad legal en Arandas, Jalisco</p>
     <a href="#formularioContacto" class="btn">Agenda tu asesoría</a>
@@ -40,16 +43,25 @@
     <h2>Quiénes Somos</h2>
     <div class="card">
       <p><strong>Lic. Cristian García Sánchez</strong><br />
-      Especialista en Derecho Penal y Métodos Alternos de Solución de Conflictos</p>
-      <p>Soy Licenciado en Derecho con una firme vocación por la justicia, la equidad y la búsqueda de soluciones integrales para cada persona que deposita su confianza en mi labor. 
-      Cuento con especialidades en Derecho Penal y en Métodos Alternos de Solución de Conflictos, lo que me permite abordar los conflictos legales desde una perspectiva tanto combativa como conciliadora, 
-      privilegiando siempre la verdad, la legalidad y el respeto a los derechos humanos.</p>
-      <p>Me distingo por una ética profesional sólida, una profunda lealtad hacia mis clientes y una actitud serena, firme y comprometida. 
-      Mi ejercicio del Derecho está guiado por la templanza, el estudio constante y una visión humanista del litigio, donde la empatía y la estrategia jurídica se combinan para obtener resultados eficaces.</p>
-      <p>Mi trayectoria se ha enriquecido tanto en el ámbito académico como en el administrativo universitario, lo que me permite entender el Derecho no solo como un instrumento técnico, 
-      sino como una vía para transformar realidades de manera justa y duradera.</p>
-      <p>Actualmente brindo asesoría legal personalizada en distintas ramas del Derecho, con un enfoque particular en casos penales, solución pacífica de controversias y orientación estratégica 
-      para personas y empresas que requieren una defensa honesta, preparada y comprometida.</p>
+        Especialista en Derecho Penal y Métodos Alternos de Solución de Conflictos
+      </p>
+      <p>
+        Soy Licenciado en Derecho con una firme vocación por la justicia, la equidad y la búsqueda de soluciones integrales para cada persona que deposita su confianza en mi labor. 
+        Cuento con especialidades en Derecho Penal y en Métodos Alternos de Solución de Conflictos, lo que me permite abordar los conflictos legales desde una perspectiva tanto combativa como conciliadora, 
+        privilegiando siempre la verdad, la legalidad y el respeto a los derechos humanos.
+      </p>
+      <p>
+        Me distingo por una ética profesional sólida, una profunda lealtad hacia mis clientes y una actitud serena, firme y comprometida. 
+        Mi ejercicio del Derecho está guiado por la templanza, el estudio constante y una visión humanista del litigio, donde la empatía y la estrategia jurídica se combinan para obtener resultados eficaces.
+      </p>
+      <p>
+        Mi trayectoria se ha enriquecido tanto en el ámbito académico como en el administrativo universitario, lo que me permite entender el Derecho no solo como un instrumento técnico, 
+        sino como una vía para transformar realidades de manera justa y duradera.
+      </p>
+      <p>
+        Actualmente brindo asesoría legal personalizada en distintas ramas del Derecho, con un enfoque particular en casos penales, solución pacífica de controversias y orientación estratégica 
+        para personas y empresas que requieren una defensa honesta, preparada y comprometida.
+      </p>
     </div>
   </section>
 
@@ -69,16 +81,18 @@
       <a href="https://wa.me/523342920274?text=Hola%20quiero%20agendar%20una%20asesoría%20legal%20por%20WhatsApp" class="btn">Solicitar asesoría por WhatsApp ($300)</a>
       <a href="https://morrison2352.github.io/CG-Bufete-Juridico/faq.html" class="btn">Ver preguntas frecuentes</a>
 
-      <!-- Aquí se reemplaza el enlace por el botón emergente de Tucalendi -->
-      <div id="tucalendi_iframe_root" 
-           data-tucalendi-options='{
-             "domain":"cgbufetejuridico.tucalendi.com/cita",
-             "widget_type":"button",
-             "button_text":"Agendar cita por Calendario",
-             "button_color":"#f5a623",
-             "button_text_color":"#ffffff"
-           }' style="margin: 10px 0;">
-      </div>
+      <!-- Botón emergente de Tucalendi para agendar cita -->
+      <div
+        id="tucalendi_iframe_root"
+        data-tucalendi-options='{
+          "domain":"cgbufetejuridico.tucalendi.com/cita",
+          "widget_type":"button",
+          "button_text":"Agendar cita por Calendario",
+          "button_color":"#f5a623",
+          "button_text_color":"#ffffff"
+        }'
+        style="margin: 10px 0;"
+      ></div>
 
       <a href="https://link.mercadopago.com.mx/cgbufetejuridico" class="btn" target="_blank">Realizar pago ($500)</a>
     </div>
@@ -97,15 +111,15 @@
     <form id="formularioContacto" onsubmit="return enviarFormularioPorCorreo()">
       <div class="card">
         <h2>Agendar Asesoría (videollamada o presencial)</h2>
-        <input type="text" name="nombre" placeholder="Nombre completo" required>
-        <input type="text" name="ciudad" placeholder="Ciudad de origen" required>
-        <input type="tel" name="telefono" placeholder="Teléfono" required>
-        <input type="email" name="correo" placeholder="Correo electrónico" required>
+        <input type="text" name="nombre" placeholder="Nombre completo" required />
+        <input type="text" name="ciudad" placeholder="Ciudad de origen" required />
+        <input type="tel" name="telefono" placeholder="Teléfono" required />
+        <input type="email" name="correo" placeholder="Correo electrónico" required />
         <textarea name="asunto" rows="5" placeholder="Descripción breve del asunto" required></textarea>
         <button type="submit" class="btn">Enviar solicitud</button>
         <p style="font-size: 0.9em; color: #666; margin-top: 10px;">
-          * Horario de atención: lunes a viernes, de 5:00 PM a 8:00 PM.<br>
-          * Costo: $500 por asesoría presencial o videollamada (2 horas).<br>
+          * Horario de atención: lunes a viernes, de 5:00 PM a 8:00 PM.<br />
+          * Costo: $500 por asesoría presencial o videollamada (2 horas).<br />
           * Asesoría por WhatsApp: $300 pesos.
         </p>
       </div>
@@ -139,13 +153,12 @@ Estoy de acuerdo con el costo de $500 por 2 horas, en horario de 5:00 PM a 8:00 
 Gracias.`);
 
       const url = `https://mail.google.com/mail/?view=cm&fs=1&to=lic.cristian.garcia.s@gmail.com&su=Solicitud%20de%20asesoría%20legal&body=${cuerpoMensaje}`;
-      window.open(url, '_blank');
+      window.open(url, "_blank");
       return false;
     }
   </script>
 
   <!-- Script para el widget Tucalendi -->
   <script type="text/javascript" src="https://widgets.tucalendi.com/assets/iframewidget_cf.js"></script>
-
 </body>
 </html>
