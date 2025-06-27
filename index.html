@@ -68,20 +68,19 @@
       </ul>
       <a href="https://wa.me/523342920274?text=Hola%20quiero%20agendar%20una%20asesoría%20legal%20por%20WhatsApp" class="btn">Solicitar asesoría por WhatsApp ($300)</a>
       <a href="https://morrison2352.github.io/CG-Bufete-Juridico/faq.html" class="btn">Ver preguntas frecuentes</a>
-      <a href="https://cgbufetejuridico.meetfy.online" class="btn" target="_blank">Agendar cita por Calendario</a>
-      <a href="https://link.mercadopago.com.mx/cgbufetejuridico" class="btn" target="_blank">Realizar pago ($500)</a>
 
-      <!-- Botón de reserva de cita con Tucalendi -->
+      <!-- Aquí se reemplaza el enlace por el botón emergente de Tucalendi -->
       <div id="tucalendi_iframe_root" 
            data-tucalendi-options='{
              "domain":"cgbufetejuridico.tucalendi.com/cita",
              "widget_type":"button",
-             "button_text":"Reservar cita",
+             "button_text":"Agendar cita por Calendario",
              "button_color":"#f5a623",
              "button_text_color":"#ffffff"
-           }'>
+           }' style="margin: 10px 0;">
       </div>
-      <script type="text/javascript" src="https://widgets.tucalendi.com/assets/iframewidget_cf.js"></script>
+
+      <a href="https://link.mercadopago.com.mx/cgbufetejuridico" class="btn" target="_blank">Realizar pago ($500)</a>
     </div>
   </section>
 
@@ -125,4 +124,28 @@
       const correo = document.querySelector('[name="correo"]').value;
       const asunto = document.querySelector('[name="asunto"]').value;
 
-      const cuerpoMensaje = encodeURIComponent(`Hola, me gustaría
+      const cuerpoMensaje = encodeURIComponent(`Hola, me gustaría agendar una asesoría legal.
+
+Nombre: ${nombre}
+Ciudad: ${ciudad}
+Teléfono: ${telefono}
+Correo: ${correo}
+
+Asunto que desea tratar:
+${asunto}
+
+Estoy de acuerdo con el costo de $500 por 2 horas, en horario de 5:00 PM a 8:00 PM.
+
+Gracias.`);
+
+      const url = `https://mail.google.com/mail/?view=cm&fs=1&to=lic.cristian.garcia.s@gmail.com&su=Solicitud%20de%20asesoría%20legal&body=${cuerpoMensaje}`;
+      window.open(url, '_blank');
+      return false;
+    }
+  </script>
+
+  <!-- Script para el widget Tucalendi -->
+  <script type="text/javascript" src="https://widgets.tucalendi.com/assets/iframewidget_cf.js"></script>
+
+</body>
+</html>
