@@ -14,11 +14,12 @@ header {
   color: #ecf0f1;
   padding: 60px 20px;
   box-shadow: 0 8px 15px rgba(44, 62, 80, 0.3);
+  text-align: center;
 }
 
 header h1 {
   font-size: 2.8em;
-  margin: 0;
+  margin: 0 0 15px;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   font-weight: 700;
@@ -28,7 +29,7 @@ header h1 {
 header p {
   font-size: 1.3em;
   color: #bdc3c7;
-  margin: 10px 0 30px;
+  margin: 0 0 30px;
   font-style: italic;
 }
 
@@ -43,17 +44,21 @@ header p {
   text-decoration: none;
   box-shadow: 0 5px 15px rgba(230, 126, 34, 0.3);
   transition: all 0.3s ease;
+  margin: 8px 10px 0; /* espacio uniforme entre botones */
+  cursor: pointer;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus {
   background-color: #d35400;
   transform: translateY(-3px);
+  outline: none;
 }
 
 section {
   padding: 60px 20px;
   max-width: 900px;
-  margin: auto;
+  margin: 0 auto 60px;
 }
 
 .card {
@@ -98,20 +103,29 @@ ul li {
   text-align: center;
 }
 
-form input, form textarea {
+form input,
+form textarea {
   width: 100%;
   max-width: 500px;
-  padding: 12px;
+  padding: 12px 15px;
   font-size: 1em;
   margin: 10px 0;
   border-radius: 8px;
   border: 1px solid #ccc;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
+  transition: border-color 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #e67e22;
+  outline: none;
 }
 
 form textarea {
   resize: vertical;
+  min-height: 100px;
 }
 
 footer {
@@ -135,6 +149,7 @@ footer {
 
   section {
     padding: 40px 10px;
+    margin-bottom: 40px;
   }
 
   .card {
@@ -157,9 +172,11 @@ footer {
   .btn {
     width: 100%;
     max-width: 300px;
+    margin: 8px auto 0;
   }
 
-  form input, form textarea {
+  form input,
+  form textarea {
     width: 100%;
   }
 }
