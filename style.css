@@ -1,4 +1,3 @@
-/* Fuente y colores base */
 body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
@@ -6,10 +5,9 @@ body {
   background: #f9fafb;
   color: #2c3e50;
   line-height: 1.7;
-  text-align: center; /* CENTRAR todo por defecto */
+  text-align: center;
 }
 
-/* Encabezado */
 header {
   background: linear-gradient(135deg, #34495e, #2c3e50);
   color: #ecf0f1;
@@ -33,7 +31,6 @@ header p {
   color: #bdc3c7;
 }
 
-/* Botones */
 .btn {
   display: inline-block;
   background: #e67e22;
@@ -51,32 +48,23 @@ header p {
 .btn:hover {
   background: #d35400;
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(211, 84, 0, 0.6);
 }
 
-/* Secciones */
 section {
   padding: 60px 20px;
   max-width: 900px;
   margin: auto;
 }
 
-/* Tarjetas */
 .card {
   background: #fff;
   padding: 35px 40px;
   border-radius: 20px;
   box-shadow: 0 12px 35px rgba(44, 62, 80, 0.1);
   margin-top: 30px;
-  text-align: center; /* CENTRAR texto dentro de la tarjeta */
-  transition: box-shadow 0.3s ease;
+  text-align: center;
 }
 
-.card:hover {
-  box-shadow: 0 20px 50px rgba(44, 62, 80, 0.15);
-}
-
-/* Títulos de secciones */
 h2 {
   color: #34495e;
   font-size: 2.2em;
@@ -86,31 +74,27 @@ h2 {
   font-weight: 900;
 }
 
-/* Listas de servicios */
-/* Cambiamos para centrar los items */
 ul {
   list-style: none;
   padding: 0;
-  margin: 0 auto 0 auto;
+  margin: 0 auto;
   max-width: 480px;
-  text-align: center; /* CENTRAR texto de la lista */
+  text-align: center;
 }
 
 ul li {
-  display: inline-block; /* Para que queden en línea o en bloques centrados */
+  display: inline-block;
   background: #fef6e4;
   padding: 14px 20px;
   margin: 8px 10px;
   border-radius: 12px;
-  border-left: none; /* quitamos borde a la izquierda */
   font-weight: 600;
   font-size: 1.05em;
   color: #34495e;
   box-shadow: 0 4px 10px rgba(230, 126, 34, 0.1);
-  min-width: 180px; /* ancho mínimo para que se vean uniformes */
+  min-width: 180px;
 }
 
-/* Contacto */
 #contact p {
   font-size: 1.1em;
   margin: 10px 0;
@@ -127,10 +111,26 @@ ul li {
   text-decoration: underline;
 }
 
-/* Pie de página */
+form input, form textarea {
+  width: 100%;
+  max-width: 500px;
+  margin: 10px auto;
+  padding: 12px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+}
+
+form textarea {
+  resize: vertical;
+}
+
 footer {
   background: #2c3e50;
-  color: #ecf0f1;
+  color: white;
   text-align: center;
   padding: 30px 15px;
   font-size: 0.95em;
