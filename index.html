@@ -11,7 +11,7 @@
   <header>
     <h1>CG Bufete Jurídico</h1>
     <p>Tu confianza es nuestra prioridad legal en Arandas, Jalisco</p>
-    <a href="https://wa.me/523342920274" class="btn">Agenda tu asesoría</a>
+    <a href="#formularioContacto" class="btn">Agenda tu asesoría</a>
   </header>
 
   <section id="about">
@@ -31,7 +31,7 @@
         <li>Elaboración de contratos, poderes y actas</li>
         <li>Trámites notariales y administrativos</li>
       </ul>
-      <a href="https://wa.me/523342920274" class="btn">Solicitar servicio</a>
+      <a href="https://wa.me/523342920274" class="btn">Solicitar servicio por WhatsApp</a>
     </div>
   </section>
 
@@ -40,4 +40,57 @@
     <div class="card">
       <p><strong>WhatsApp:</strong> <a href="https://wa.me/523342920274">+52 334 292 0274</a></p>
       <p><strong>Email:</strong> <a href="mailto:lic.cristian.garcis.s@gmail.com">lic.cristian.garcis.s@gmail.com</a></p>
+      <p><strong>Ubicación:</strong> Arandas, Jalisco</p>
+    </div>
+  </section>
 
+  <section id="formulario">
+    <form id="formularioContacto" onsubmit="return enviarFormularioPorCorreo()">
+      <div class="card">
+        <h2>Agendar Asesoría</h2>
+        <input type="text" name="nombre" placeholder="Nombre completo" required>
+        <input type="text" name="ciudad" placeholder="Ciudad de origen" required>
+        <input type="tel" name="telefono" placeholder="Teléfono" required>
+        <input type="email" name="correo" placeholder="Correo electrónico" required>
+        <textarea name="asunto" rows="5" placeholder="Descripción breve del asunto" required></textarea>
+        <button type="submit" class="btn">Enviar solicitud</button>
+        <p style="font-size: 0.9em; color: #666; margin-top: 10px;">* Horario disponible: lunes a viernes, de 5:00 PM a 8:00 PM. Costo: $500 por 2 horas.</p>
+      </div>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 CG Bufete Jurídico. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    function enviarFormularioPorCorreo() {
+      const nombre = document.querySelector('[name="nombre"]').value;
+      const ciudad = document.querySelector('[name="ciudad"]').value;
+      const telefono = document.querySelector('[name="telefono"]').value;
+      const correo = document.querySelector('[name="correo"]').value;
+      const asunto = document.querySelector('[name="asunto"]').value;
+
+      const cuerpoMensaje = `
+Hola, me gustaría agendar una asesoría legal.
+
+Nombre: ${nombre}
+Ciudad: ${ciudad}
+Teléfono: ${telefono}
+Correo: ${correo}
+
+Asunto que desea tratar:
+${asunto}
+
+Estoy de acuerdo con el costo de $500 por 2 horas, en horario de 5:00 PM a 8:00 PM.
+
+Gracias.
+      `.replace(/\n/g, "%0A");
+
+      const url = `mailto:lic.cristian.garcis.s@gmail.com?subject=Solicitud%20de%20asesor%C3%ADa%20legal&body=${cuerpoMensaje}`;
+      window.location.href = url;
+      return false;
+    }
+  </script>
+</body>
+</html>
