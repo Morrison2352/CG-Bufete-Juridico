@@ -27,11 +27,12 @@
     <h2>Servicios</h2>
     <div class="card">
       <ul>
-        <li>Asesorías legales presenciales y en línea</li>
+        <li>Asesorías legales presenciales o videollamada – $500 por 2 horas</li>
+        <li>Asesorías legales por WhatsApp – $300</li>
         <li>Elaboración de contratos, poderes y actas</li>
         <li>Trámites notariales y administrativos</li>
       </ul>
-      <a href="https://wa.me/523342920274" class="btn">Solicitar servicio por WhatsApp</a>
+      <a href="https://wa.me/523342920274?text=Hola%20quiero%20agendar%20una%20asesoría%20legal%20por%20WhatsApp" class="btn">Solicitar asesoría por WhatsApp ($300)</a>
     </div>
   </section>
 
@@ -39,4 +40,60 @@
     <h2>Contacto</h2>
     <div class="card">
       <p><strong>WhatsApp:</strong> <a href="https://wa.me/523342920274">+52 334 292 0274</a></p>
-      <p><strong>Email:</strong> <a href="mailto:li
+      <p><strong>Email:</strong>lic.cristian.garcia.s <a href="mailto:lic.cristian.garcia.s@gmail.com">lic.cristian.garcia.s@gmail.com</a></p>
+      <p><strong>Ubicación:</strong> Arandas, Jalisco</p>
+    </div>
+  </section>
+
+  <section id="formulario">
+    <form id="formularioContacto" onsubmit="return enviarFormularioPorCorreo()">
+      <div class="card">
+        <h2>Agendar Asesoría (videollamada o presencial)</h2>
+        <input type="text" name="nombre" placeholder="Nombre completo" required>
+        <input type="text" name="ciudad" placeholder="Ciudad de origen" required>
+        <input type="tel" name="telefono" placeholder="Teléfono" required>
+        <input type="email" name="correo" placeholder="Correo electrónico" required>
+        <textarea name="asunto" rows="5" placeholder="Descripción breve del asunto" required></textarea>
+        <button type="submit" class="btn">Enviar solicitud</button>
+        <p style="font-size: 0.9em; color: #666; margin-top: 10px;">
+          * Horario de atención: lunes a viernes, de 5:00 PM a 8:00 PM.<br>
+          * Costo: $500 por asesoría presencial o videollamada (2 horas).<br>
+          * Asesoría por WhatsApp: $300 pesos.
+        </p>
+      </div>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 CG Bufete Jurídico. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    function enviarFormularioPorCorreo() {
+      const nombre = document.querySelector('[name="nombre"]').value;
+      const ciudad = document.querySelector('[name="ciudad"]').value;
+      const telefono = document.querySelector('[name="telefono"]').value;
+      const correo = document.querySelector('[name="correo"]').value;
+      const asunto = document.querySelector('[name="asunto"]').value;
+
+      const cuerpoMensaje = encodeURIComponent(`Hola, me gustaría agendar una asesoría legal.
+
+Nombre: ${nombre}
+Ciudad: ${ciudad}
+Teléfono: ${telefono}
+Correo: ${correo}
+
+Asunto que desea tratar:
+${asunto}
+
+Estoy de acuerdo con el costo de $500 por 2 horas, en horario de 5:00 PM a 8:00 PM.
+
+Gracias.`);
+
+      const url = `https://mail.google.com/mail/?view=cm&fs=1&to=lic.cristian.garcia.s@gmail.com&su=Solicitud%20de%20asesoría%20legal&body=${cuerpoMensaje}`;
+      window.open(url, '_blank');
+      return false;
+    }
+  </script>
+</body>
+</html>
