@@ -4,111 +4,90 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>CG Bufete Jurídico</title>
+  <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     body {
       font-family: 'Montserrat', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f8f8f8;
-      color: #333;
     }
-
     header {
-      background-color: #002f6c;
-      color: white;
       text-align: center;
-      padding: 30px 20px;
+      padding: 20px;
     }
-
-    header .btn.gold {
-      background-color: #f5a623;
-      color: #fff;
-    }
-
     .logo-container {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
     }
-
     .logo-container img {
       max-width: 300px;
       width: 100%;
       height: auto;
     }
-
-    section {
-      padding: 30px 20px;
-    }
-
-    h2 {
-      color: #002f6c;
-      margin-bottom: 10px;
-    }
-
-    .card {
-      background-color: white;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      margin-bottom: 20px;
-    }
-
-    ul {
-      list-style: disc;
-      padding-left: 20px;
-    }
-
     .btn {
       display: inline-block;
-      background-color: #002f6c;
+      background-color: #f5a623;
       color: white;
-      padding: 12px 20px;
-      text-decoration: none;
+      padding: 10px 20px;
+      margin: 5px;
       border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .card {
+      padding: 20px;
+      margin: 20px;
       border-radius: 8px;
-      margin: 10px 5px;
+      background-color: #f9f9f9;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    footer {
       text-align: center;
-      font-weight: 600;
-      transition: background 0.3s;
+      padding: 10px;
+      background: #eee;
     }
-
-    .btn:hover {
-      background-color: #0148a6;
-    }
-
     input, textarea {
       width: 100%;
       padding: 10px;
-      margin: 10px 0;
-      border-radius: 6px;
+      margin: 8px 0;
+      border-radius: 4px;
       border: 1px solid #ccc;
-      font-family: 'Montserrat', sans-serif;
     }
-
-    button.btn {
-      width: 100%;
-      cursor: pointer;
+    #modalPago {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
     }
-
-    footer {
-      background-color: #002f6c;
-      color: white;
+    #modalPago .modal-content {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 500px;
+      width: 90%;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
       text-align: center;
-      padding: 15px 10px;
-      font-size: 0.9em;
     }
-
-    @media screen and (max-width: 600px) {
-      .logo-container img {
-        max-width: 220px;
-      }
-
-      .btn {
-        width: 100%;
-      }
+    #calendarWidget {
+      display: none;
+      margin-top: 20px;
+    }
+    .close {
+      float: right;
+      font-size: 1.2em;
+      cursor: pointer;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -118,21 +97,11 @@
       <img src="https://raw.githubusercontent.com/Morrison2352/CG-Bufete-Juridico/refs/heads/main/CG%20Bufete%20Juridico.png.jpeg" alt="Logo CG Bufete Jurídico" />
     </div>
     <p>Tu confianza es nuestra prioridad legal en Arandas, Jalisco</p>
-    <a href="#formularioContacto" class="btn gold">Agenda tu asesoría</a>
+    <button onclick="abrirModal()" class="btn">Agenda tu asesoría</button>
   </header>
 
-  <section id="about">
-    <h2>Quiénes Somos</h2>
-    <div class="card">
-      <p><strong>Lic. Cristian García Sánchez</strong><br />
-        Especialista en Derecho Penal y Métodos Alternos de Solución de Conflictos</p>
-      <p>Soy Licenciado en Derecho con una firme vocación por la justicia, la equidad y la búsqueda de soluciones integrales para cada persona que deposita su confianza en mi labor.</p>
-      <p>Me distingo por una ética profesional sólida, una profunda lealtad hacia mis clientes y una actitud serena, firme y comprometida.</p>
-    </div>
-  </section>
-
   <section id="services">
-    <h2>Servicios</h2>
+    <h2 style="text-align:center;">Servicios</h2>
     <div class="card">
       <ul>
         <li>Asesorías legales presenciales o videollamada – $500 por 2 horas</li>
@@ -141,88 +110,65 @@
         <li>Trámites notariales y administrativos</li>
         <li>Defensa penal estratégica</li>
         <li>Solución de conflictos por mediación o conciliación</li>
+        <li>Orientación en casos civiles y familiares</li>
+        <li>Consultoría en derecho universitario y académico</li>
       </ul>
-      <a href="https://wa.me/523342920274?text=Hola%20quiero%20agendar%20una%20asesoría%20legal%20por%20WhatsApp" class="btn">Solicitar asesoría por WhatsApp</a>
+      <a href="https://wa.me/523342920274?text=Hola%20quiero%20agendar%20una%20asesoría%20legal%20por%20WhatsApp" class="btn">Solicitar asesoría por WhatsApp ($300)</a>
       <a href="https://morrison2352.github.io/CG-Bufete-Juridico/faq.html" class="btn">Ver preguntas frecuentes</a>
       <a href="https://link.mercadopago.com.mx/cgbufetejuridico" class="btn" target="_blank">Realizar pago ($500)</a>
-      <button onclick="mostrarInstruccionesPago()" class="btn">Agendar cita por Calendario</button>
     </div>
   </section>
 
-  <section id="contact">
-    <h2>Contacto</h2>
-    <div class="card">
-      <p><strong>WhatsApp:</strong> <a href="https://wa.me/523342920274">+52 334 292 0274</a></p>
-      <p><strong>Email:</strong> <a href="mailto:lic.cristian.garcia.s@gmail.com">lic.cristian.garcia.s@gmail.com</a></p>
-      <p><strong>Ubicación:</strong> Leona Vicario #213, Col. Centro, Arandas, Jalisco</p>
-    </div>
-  </section>
-
-  <section id="formulario">
-    <form id="formularioContacto" onsubmit="return enviarFormularioPorCorreo()">
-      <div class="card">
-        <h2>Agendar Asesoría</h2>
+  <div id="modalPago">
+    <div class="modal-content">
+      <span class="close" onclick="cerrarModal()">&times;</span>
+      <h3>Verificación de Pago</h3>
+      <p>⚠️ Antes de agendar tu asesoría, es necesario realizar el pago de $500 pesos. Por favor, adjunta tu comprobante y envíalo. También es importante que lo envíes por WhatsApp.</p>
+      <form id="formComprobante" action="https://formsubmit.co/ajax/lic.cristian.garcia.s@gmail.com" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="_subject" value="Comprobante de pago para agendar cita" />
+        <input type="hidden" name="_captcha" value="false">
         <input type="text" name="nombre" placeholder="Nombre completo" required />
-        <input type="text" name="ciudad" placeholder="Ciudad de origen" required />
-        <input type="tel" name="telefono" placeholder="Teléfono" required />
-        <input type="email" name="correo" placeholder="Correo electrónico" required />
-        <textarea name="asunto" rows="5" placeholder="Descripción breve del asunto" required></textarea>
-        <button type="submit" class="btn">Enviar solicitud</button>
-        <p style="font-size: 0.9em; color: #666; margin-top: 10px;">
-          * Horario de atención: lunes a viernes, de 5:00 PM a 8:00 PM.<br />
-          * Costo asesoría presencial o videollamada: $500 pesos.<br />
-          * Asesoría por WhatsApp: $300 pesos.
-        </p>
+        <input type="text" name="telefono" placeholder="Número de WhatsApp" required />
+        <input type="file" name="comprobante" accept="image/*,application/pdf" required />
+        <button type="submit" class="btn">Enviar comprobante</button>
+      </form>
+      <div id="calendarWidget">
+        <p>✅ Comprobante enviado. Ahora puedes reservar tu cita:</p>
+        <div id="tucalendi_iframe_root" data-tucalendi-domain="cgbufetejuridico.tucalendi.com/cita" data-tucalendi-options=""></div>
       </div>
-    </form>
-  </section>
+    </div>
+  </div>
 
   <footer>
     <p>© 2025 CG Bufete Jurídico. Todos los derechos reservados.</p>
   </footer>
 
-  <script>
-    function enviarFormularioPorCorreo() {
-      const nombre = document.querySelector('[name="nombre"]').value;
-      const ciudad = document.querySelector('[name="ciudad"]').value;
-      const telefono = document.querySelector('[name="telefono"]').value;
-      const correo = document.querySelector('[name="correo"]').value;
-      const asunto = document.querySelector('[name="asunto"]').value;
-
-      const cuerpoMensaje = encodeURIComponent(`Hola, me gustaría agendar una asesoría legal.
-
-Nombre: ${nombre}
-Ciudad: ${ciudad}
-Teléfono: ${telefono}
-Correo: ${correo}
-
-Asunto que desea tratar:
-${asunto}
-
-Estoy de acuerdo con el costo de $500 por 2 horas, en horario de 5:00 PM a 8:00 PM.
-
-Gracias.`);
-
-      const url = `https://mail.google.com/mail/?view=cm&fs=1&to=lic.cristian.garcia.s@gmail.com&su=Solicitud%20de%20asesoría%20legal&body=${cuerpoMensaje}`;
-      window.open(url, "_blank");
-      return false;
-    }
-
-    function mostrarInstruccionesPago() {
-      alert("⚠️ Antes de agendar, recuerda realizar tu pago por $500 en el botón 'Realizar pago'.");
-      window.scrollTo(0, document.body.scrollHeight);
-      setTimeout(() => {
-        const tuCalendiBtn = document.querySelector('#tucalendi_iframe_root');
-        if (tuCalendiBtn) {
-          tuCalendiBtn.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 300);
-    }
-  </script>
-
-  <!-- TuCalendi Widget -->
-  <div id="tucalendi_iframe_root" data-tucalendi-options='{"domain":"cgbufetejuridico.tucalendi.com/cita/asesorias","widget_type":"button","button_text":"Reservar","button_color":"#0e0cbe","button_text_color":"#ffffff"}'></div>
   <script type="text/javascript" src="https://widgets.tucalendi.com/assets/iframewidget_cf.js"></script>
-  <!-- End TuCalendi Widget -->
+  <script>
+    function abrirModal() {
+      document.getElementById('modalPago').style.display = 'flex';
+    }
+    function cerrarModal() {
+      document.getElementById('modalPago').style.display = 'none';
+    }
+
+    document.getElementById('formComprobante').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const form = e.target;
+      const formData = new FormData(form);
+
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: formData
+      });
+
+      if (response.ok) {
+        form.style.display = 'none';
+        document.getElementById('calendarWidget').style.display = 'block';
+      } else {
+        alert("❌ Hubo un error al enviar el comprobante. Por favor, intenta nuevamente.");
+      }
+    });
+  </script>
 </body>
 </html>
