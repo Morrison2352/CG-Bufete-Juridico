@@ -4,14 +4,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>CG Bufete Jurídico</title>
-  <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+      color: #333;
+    }
+
+    header {
+      background-color: #002f6c;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    header .btn {
+      margin-top: 15px;
+    }
+
     .logo-container {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
     }
 
     .logo-container img {
@@ -20,9 +38,75 @@
       height: auto;
     }
 
+    section {
+      padding: 30px 20px;
+    }
+
+    h2 {
+      color: #002f6c;
+      margin-bottom: 10px;
+    }
+
+    .card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #002f6c;
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      border: none;
+      border-radius: 8px;
+      margin: 10px 5px;
+      text-align: center;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #0148a6;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    button.btn {
+      width: 100%;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #002f6c;
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      font-size: 0.9em;
+    }
+
     @media screen and (max-width: 600px) {
       .logo-container img {
         max-width: 220px;
+      }
+
+      .btn {
+        width: 100%;
       }
     }
   </style>
@@ -30,10 +114,7 @@
 <body>
   <header>
     <div class="logo-container">
-      <img
-        src="https://raw.githubusercontent.com/Morrison2352/CG-Bufete-Juridico/refs/heads/main/CG%20Bufete%20Juridico.png.jpeg"
-        alt="Logo CG Bufete Jurídico"
-      />
+      <img src="https://raw.githubusercontent.com/Morrison2352/CG-Bufete-Juridico/refs/heads/main/CG%20Bufete%20Juridico.png.jpeg" alt="Logo CG Bufete Jurídico" />
     </div>
     <p>Tu confianza es nuestra prioridad legal en Arandas, Jalisco</p>
     <a href="#formularioContacto" class="btn">Agenda tu asesoría</a>
@@ -43,25 +124,9 @@
     <h2>Quiénes Somos</h2>
     <div class="card">
       <p><strong>Lic. Cristian García Sánchez</strong><br />
-        Especialista en Derecho Penal y Métodos Alternos de Solución de Conflictos
-      </p>
-      <p>
-        Soy Licenciado en Derecho con una firme vocación por la justicia, la equidad y la búsqueda de soluciones integrales para cada persona que deposita su confianza en mi labor. 
-        Cuento con especialidades en Derecho Penal y en Métodos Alternos de Solución de Conflictos, lo que me permite abordar los conflictos legales desde una perspectiva tanto combativa como conciliadora, 
-        privilegiando siempre la verdad, la legalidad y el respeto a los derechos humanos.
-      </p>
-      <p>
-        Me distingo por una ética profesional sólida, una profunda lealtad hacia mis clientes y una actitud serena, firme y comprometida. 
-        Mi ejercicio del Derecho está guiado por la templanza, el estudio constante y una visión humanista del litigio, donde la empatía y la estrategia jurídica se combinan para obtener resultados eficaces.
-      </p>
-      <p>
-        Mi trayectoria se ha enriquecido tanto en el ámbito académico como en el administrativo universitario, lo que me permite entender el Derecho no solo como un instrumento técnico, 
-        sino como una vía para transformar realidades de manera justa y duradera.
-      </p>
-      <p>
-        Actualmente brindo asesoría legal personalizada en distintas ramas del Derecho, con un enfoque particular en casos penales, solución pacífica de controversias y orientación estratégica 
-        para personas y empresas que requieren una defensa honesta, preparada y comprometida.
-      </p>
+        Especialista en Derecho Penal y Métodos Alternos de Solución de Conflictos</p>
+      <p>Soy Licenciado en Derecho con una firme vocación por la justicia, la equidad y la búsqueda de soluciones integrales para cada persona que deposita su confianza en mi labor.</p>
+      <p>Me distingo por una ética profesional sólida, una profunda lealtad hacia mis clientes y una actitud serena, firme y comprometida.</p>
     </div>
   </section>
 
@@ -75,25 +140,9 @@
         <li>Trámites notariales y administrativos</li>
         <li>Defensa penal estratégica</li>
         <li>Solución de conflictos por mediación o conciliación</li>
-        <li>Orientación en casos civiles y familiares</li>
-        <li>Consultoría en derecho universitario y académico</li>
       </ul>
-      <a href="https://wa.me/523342920274?text=Hola%20quiero%20agendar%20una%20asesoría%20legal%20por%20WhatsApp" class="btn">Solicitar asesoría por WhatsApp ($300)</a>
+      <a href="https://wa.me/523342920274?text=Hola%20quiero%20agendar%20una%20asesoría%20legal%20por%20WhatsApp" class="btn">Solicitar asesoría por WhatsApp</a>
       <a href="https://morrison2352.github.io/CG-Bufete-Juridico/faq.html" class="btn">Ver preguntas frecuentes</a>
-
-      <!-- Botón emergente de Tucalendi para agendar cita -->
-      <div
-        id="tucalendi_iframe_root"
-        data-tucalendi-options='{
-          "domain":"cgbufetejuridico.tucalendi.com/cita",
-          "widget_type":"button",
-          "button_text":"Agendar cita por Calendario",
-          "button_color":"#f5a623",
-          "button_text_color":"#ffffff"
-        }'
-        style="margin: 10px 0;"
-      ></div>
-
       <a href="https://link.mercadopago.com.mx/cgbufetejuridico" class="btn" target="_blank">Realizar pago ($500)</a>
     </div>
   </section>
@@ -110,7 +159,7 @@
   <section id="formulario">
     <form id="formularioContacto" onsubmit="return enviarFormularioPorCorreo()">
       <div class="card">
-        <h2>Agendar Asesoría (videollamada o presencial)</h2>
+        <h2>Agendar Asesoría</h2>
         <input type="text" name="nombre" placeholder="Nombre completo" required />
         <input type="text" name="ciudad" placeholder="Ciudad de origen" required />
         <input type="tel" name="telefono" placeholder="Teléfono" required />
@@ -119,7 +168,7 @@
         <button type="submit" class="btn">Enviar solicitud</button>
         <p style="font-size: 0.9em; color: #666; margin-top: 10px;">
           * Horario de atención: lunes a viernes, de 5:00 PM a 8:00 PM.<br />
-          * Costo: $500 por asesoría presencial o videollamada (2 horas).<br />
+          * Costo asesoría presencial o videollamada: $500 pesos.<br />
           * Asesoría por WhatsApp: $300 pesos.
         </p>
       </div>
@@ -157,8 +206,5 @@ Gracias.`);
       return false;
     }
   </script>
-
-  <!-- Script para el widget Tucalendi -->
-  <script type="text/javascript" src="https://widgets.tucalendi.com/assets/iframewidget_cf.js"></script>
 </body>
 </html>
