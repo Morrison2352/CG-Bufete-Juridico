@@ -13,11 +13,14 @@
       font-family: 'Montserrat', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #fff;
+      background-color: #fdfaf7;
+      color: #2e2e2e;
     }
     header {
       text-align: center;
       padding: 20px;
+      background-color: #003049;
+      color: #fff;
     }
     .logo-container {
       display: flex;
@@ -41,19 +44,24 @@
       text-decoration: none;
       font-weight: bold;
       cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #c98300;
     }
     .card {
       padding: 20px;
       margin: 20px auto;
       border-radius: 8px;
-      background-color: #f9f9f9;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      background-color: #ffffff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       max-width: 800px;
     }
     footer {
       text-align: center;
       padding: 10px;
-      background: #eee;
+      background: #003049;
+      color: white;
     }
     input, textarea {
       width: 100%;
@@ -133,7 +141,7 @@
   </header>
 
   <section id="services">
-    <h2 style="text-align:center;">Servicios</h2>
+    <h2 style="text-align:center; color: #003049;">Servicios</h2>
     <div class="card">
       <ul>
         <li>Asesorías legales presenciales o videollamada – $500 por 2 horas</li>
