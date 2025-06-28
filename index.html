@@ -21,8 +21,9 @@
       padding: 30px 20px;
     }
 
-    header .btn {
-      margin-top: 15px;
+    header .btn.gold {
+      background-color: #f5a623;
+      color: #fff;
     }
 
     .logo-container {
@@ -117,7 +118,7 @@
       <img src="https://raw.githubusercontent.com/Morrison2352/CG-Bufete-Juridico/refs/heads/main/CG%20Bufete%20Juridico.png.jpeg" alt="Logo CG Bufete Jurídico" />
     </div>
     <p>Tu confianza es nuestra prioridad legal en Arandas, Jalisco</p>
-    <a href="#formularioContacto" class="btn">Agenda tu asesoría</a>
+    <a href="#formularioContacto" class="btn gold">Agenda tu asesoría</a>
   </header>
 
   <section id="about">
@@ -144,6 +145,7 @@
       <a href="https://wa.me/523342920274?text=Hola%20quiero%20agendar%20una%20asesoría%20legal%20por%20WhatsApp" class="btn">Solicitar asesoría por WhatsApp</a>
       <a href="https://morrison2352.github.io/CG-Bufete-Juridico/faq.html" class="btn">Ver preguntas frecuentes</a>
       <a href="https://link.mercadopago.com.mx/cgbufetejuridico" class="btn" target="_blank">Realizar pago ($500)</a>
+      <button onclick="mostrarInstruccionesPago()" class="btn">Agendar cita por Calendario</button>
     </div>
   </section>
 
@@ -205,6 +207,22 @@ Gracias.`);
       window.open(url, "_blank");
       return false;
     }
+
+    function mostrarInstruccionesPago() {
+      alert("⚠️ Antes de agendar, recuerda realizar tu pago por $500 en el botón 'Realizar pago'.");
+      window.scrollTo(0, document.body.scrollHeight);
+      setTimeout(() => {
+        const tuCalendiBtn = document.querySelector('#tucalendi_iframe_root');
+        if (tuCalendiBtn) {
+          tuCalendiBtn.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 300);
+    }
   </script>
+
+  <!-- TuCalendi Widget -->
+  <div id="tucalendi_iframe_root" data-tucalendi-options='{"domain":"cgbufetejuridico.tucalendi.com/cita/asesorias","widget_type":"button","button_text":"Reservar","button_color":"#0e0cbe","button_text_color":"#ffffff"}'></div>
+  <script type="text/javascript" src="https://widgets.tucalendi.com/assets/iframewidget_cf.js"></script>
+  <!-- End TuCalendi Widget -->
 </body>
 </html>
