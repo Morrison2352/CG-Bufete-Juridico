@@ -134,7 +134,7 @@
       </form>
       <div id="calendarWidget">
         <p>✅ Comprobante enviado. Ahora puedes reservar tu cita:</p>
-        <div id="tucalendi_iframe_root" data-tucalendi-domain="cgbufetejuridico.tucalendi.com/cita" data-tucalendi-options=""></div>
+        <div id="tucalendi_iframe_root" data-tucalendi-domain="cgbufetejuridico.tucalendi.com/cita/asesoramiento-asuntos" data-tucalendi-options=""></div>
       </div>
     </div>
   </div>
@@ -165,6 +165,14 @@
       if (response.ok) {
         form.style.display = 'none';
         document.getElementById('calendarWidget').style.display = 'block';
+
+        setTimeout(() => {
+          const script = document.createElement('script');
+          script.src = "https://widgets.tucalendi.com/assets/iframewidget_cf.js";
+          script.async = true;
+          document.body.appendChild(script);
+        }, 300);
+
       } else {
         alert("❌ Hubo un error al enviar el comprobante. Por favor, intenta nuevamente.");
       }
